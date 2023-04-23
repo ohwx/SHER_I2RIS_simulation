@@ -5,22 +5,6 @@
 The project aims to implement the simulation of the combined teleoperation system in Asynchronous multi-body framework (AMBF). Simulation is one of the common means of testing robots, it enables researchers to quickly develop, validate and test control algorithms without worrying about damaging the robot. To achieve the goal, the model of the snake robot should be built in Blender according to the CAD drawing and then connected to eye robot in the simulation. Meanwhile, an AMBF plugin will be developed to manipulate the snake robot(Fig.1 C) attached to SHER(Fig.1 B) and interact with an OCT Scan of the eye.In addition, we also aim to develop a controller using haptic device(Fig.1 D) in AMBF and further test on the real robot.
 
 
-A program to simulate a continuum manipulator that is able to interact with and remove parts of a volumetric model. The initial application is to simulate the control of a dexterous surgical tool for curved drilling for autonomous surgical procedures in orthopaedics (e.g., femur and spine). This is implemented as a plugin for AMBF https://github.com/WPI-AIM/ambf/.
-The primary use-case of this simulation tool is to more-rapidly develop and test control strategies and allow for visualization of feasability, etc. of certain plans. When paired with the XREG library, simulated Xray images can be taken of the scene and can be used to train, test, etc. image-based navigation.
-
-
-https://user-images.githubusercontent.com/17507145/216717871-ee82b41d-9e78-4d6e-a40e-4dd5104f0a77.mp4
-
-
-https://user-images.githubusercontent.com/17507145/216717892-d7fd4dc4-dcd4-4406-8a1b-ea22bb869bd1.mp4
-
-
-https://user-images.githubusercontent.com/17507145/232047575-106d8e54-e95c-400b-a68e-ca77c69933a6.mp4
-
-This plugin is an 'unofficial fork' of Adnan Munawar et al. See their work at https://github.com/LCSR-SICKKIDS/volumetric_drilling. Both have undergone significant development since the split so there is some divergence. The plan is to converge at least the volumetric drilling (i.e. what happens at the burr) at some point. In fact, this plugin may be split into several plugins in the future, but for now, it is all in one.
-
-This pairs well with another plugin I wrote (https://github.com/htp2/ambf_trace_plugin), you might find reference to it in the launch file!
-
 # Installation Instructions:
 ## Install and Source AMBF 2.0
 
