@@ -10,17 +10,37 @@ The project aims to implement the simulation of the combined teleoperation syste
 
 Build and source AMBF as per the instructions on AMBFs wiki: https://github.com/WPI-AIM/ambf/wiki/Installing-AMBF.
 
-## Clone and Build Simulator
+## Install Blender
 
-### [Recommended] Build with catkin (ROS1)
-Since using this with ROS is part of the current intended use case, in these instructions, I assume you will build this in a catkin workspace. Development of all ROS-related items have been compartmentalized to allow for easier updating to ROS2, etc. once that time comes.
-
-These are instructions to build in an existing catkin workspace. If you do not have one yet, take a look at: http://wiki.ros.org/catkin/Tutorials/create_a_workspace
-
-For convenince in setting default filepaths in the code (and in writing these instructions), we suggest users set an environment variable ```CATKIN_WS```. You can check using ``` printenv|grep CATKIN_WS ```. It is recommended to put this directly into your .bashrc so it is set automatically. You only need to do this once!
+Download the Linux version for your architecture and uncompress the file to the desired location from blender.org. Run it from the terminal.
 ```bash
-echo 'export CATKIN_WS=/home/$USER/bigss/catkin_ws' >> ~/.bashrc
+cd <blender_path>/blender-3.4.1-linux-x64
+./blender
 ```
+
+# Build simulation model in Blender
+## How to Install AMBF Add-on
+You can refer to the detailed tutorial at https://github.com/WPI-AIM/ambf_addon.
+To install the AMBF add-on, open Blender and go to the top menu bar. Find `Scripting` and import `ambf_addon.py`, then click `Run`. The AMBF plug-in will be successfully added. If it does not automatically pop up, you can open the right-side menu by pressing `n`.
+
+## How to Use Blender to Create Simulation Models
+First, import your model's parts and assemble them. You can press `g` and choose different snapping methods, then adjust the location. If you used rotation or scaling during assembly, press `ctrl+A` and choose `Rotation/Scaling` to apply the changes to the model.
+
+After assembly, enable AMBF rigid body for each component in the AMBF add-on. Then, in `OPTIONAL HELPERS`, find `Create Joint` and select the appropriate type, parent, and child. You also need to adjust the joint's position in the model.
+
+Once you have generated the joints, you can save the meshes in section C of the add-on and save the ADF in section D. Then, run the generated `.yaml` file in the terminal.
+```bash
+cd ambf/bin/lin-x86_64/
+./ambf_simulator -a <yaml.file_path>
+```
+
+
+
+
+
+
+
+
 
 # Running the Plugin with ambf_simulator:
 The plugin is launched on top of the AMBF simulator along with other AMBF bodies, described by AMBF Description Format files (ADFs), as will be demonstrated below. The `libcontinuum_manip_volumetric_drilling_plugin.so` plugin is initialized in the `launch.yaml` file and can be commented out for the purpose of debugging the ADF files.   
