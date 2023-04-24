@@ -2,8 +2,9 @@
 
 # Description
 
-The project aims to implement the simulation of the combined teleoperation system in Asynchronous multi-body framework (AMBF). Simulation is one of the common means of testing robots, it enables researchers to quickly develop, validate and test control algorithms without worrying about damaging the robot. To achieve the goal, the model of the snake robot should be built in Blender according to the CAD drawing and then connected to eye robot in the simulation. Meanwhile, an AMBF plugin will be developed to manipulate the snake robot(Fig.1 C) attached to SHER(Fig.1 B) and interact with an OCT Scan of the eye.In addition, we also aim to develop a controller using haptic device(Fig.1 D) in AMBF and further test on the real robot.
+The project aims to implement the simulation of the combined teleoperation system in Asynchronous multi-body framework (AMBF). Simulation is one of the common means of testing robots, it enables researchers to quickly develop, validate and test control algorithms without worrying about damaging the robot. To achieve the goal, the model of the snake robot should be built in Blender according to the CAD drawing and then connected to eye robot in the simulation. Meanwhile, an AMBF plugin will be developed to manipulate the snake robot(Part C) attached to SHER(Part B) and interact with an OCT Scan of the eye.In addition, we also aim to develop a controller using haptic device(Part D) in AMBF and further test on the real robot.
 
+![image](https://raw.githubusercontent.com/ohwx/SHER_I2RIS_simulation/main/%2B%2B%2B%2BISMR22_0012_MS.jpg)
 
 # Installation Instructions:
 ## Install and Source AMBF 2.0
